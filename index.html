@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/023adf106b.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+
+<!-- jQuery.jsの読み込み -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+</head>
+<body>
+
+  <header>
+    <div class="header-cover">
+      <img src="img/logo.png" alt="">
+      <i class="fas fa-bars fa-lg"></i>
+    </div>
+      <input type="checkbox" class="drawer-btn">
+
+
+    <div class="header-nav">
+      <ul class="header-menu">
+        <li><a href="#"><i class="fas fa-chevron-right"></i>TOP</a></li>
+        <li><a href="#message"><i class="fas fa-chevron-right"></i>MESSAGE</a></li>
+        <li><a href="#gallery"><i class="fas fa-chevron-right"></i>GALLERY</a></li>
+        <li><a href="#brand"><i class="fas fa-chevron-right"></i>BRAND</a></li>
+        <li><a href="#project"><i class="fas fa-chevron-right"></i>PROJECT</a></li>
+        <li><a href="#company"><i class="fas fa-chevron-right"></i>COMPANY</a></li>
+      </ul>
+
+      <div class="header-icons">
+        <a href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
+        <a href="#"><i class="fab fa-twitter-square fa-lg"></i></a>
+        <a href="#"><i class="fab fa-instagram-square fa-lg"></i></a>
+        <a href="#"><i class="fab fa-youtube-square fa-lg"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="side-contents">
+        <img class="side-logo" src="img/logo.png" alt="">
+        <ul class="side-menu">
+          <li><a href="#">TOP</a></li>
+          <li><a href="#message">MESSAGE</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#brand">BRAND</a></li>
+          <li><a href="#project">PROJECT</a></li>
+          <li><a href="#company">COMPANY</a></li>
+        </ul>
+        <div class="side-icon">
+          <a href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="#"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram-square fa-lg"></i></a>
+          <a href="#"><i class="fab fa-youtube-square fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents">
+      <img class="top-img" src="img/mainImg.jpg" alt="">
+
+      <div class="message-wrapper">
+        <h1 class="heading" id="message">MESSAGE</h1>
+        <div class="textarea" data-aos="fade-right">
+        <p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。ホームページサンプル株式会社。ホームページサンプル株式会社では最新技術と自然との調和を目な技術で世の中を動かす企業を目指します。ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+        </div>
+      </div>
+
+      <div class="photo-wrapper js-scroll-trigger">
+        <h1 class="heading" id="gallery">GALLERY</h1>
+        <div class="photo-item">
+          <img src="img/photo01.jpg" alt="" data-aos="zoom-in"><img src="img/photo02.jpg" alt="" data-aos="zoom-in"><img src="img/photo03.jpg" alt="" data-aos="zoom-in">
+          <img src="img/photo04.jpg" alt="" data-aos="zoom-in"><img src="img/photo05.jpg" alt="" data-aos="zoom-in"><img src="img/photo06.jpg" alt="" data-aos="zoom-in">
+          <span><img class="big-photo" src="img/photo07.jpg" alt="" data-aos="zoom-in"></span>
+          <img src="img/photo08.jpg" alt="" data-aos="zoom-in"><img src="img/photo09.jpg" alt="" data-aos="zoom-in"><img src="img/photo10.jpg" alt="" data-aos="zoom-in">
+          <img src="img/photo11.jpg" alt="" data-aos="zoom-in"><img src="img/photo12.jpg" alt="" data-aos="zoom-in"><img src="img/photo13.jpg" alt="" data-aos="zoom-in">
+        </div>
+      </div>
+
+      <div class="brand-wrapper">
+        <h1 class="heading" id="brand">BRAND</h1>
+        <div class="brand-contents">
+          <div class="contents-item" data-aos="fade-right" data-aos-easing="ease-in">
+            <img src="img/logo01.png" alt="">
+            <p>ホームページサンプル株式会社では最動かす企業を目指します。</p>
+          </div>
+          <div class="contents-item" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="400">
+            <img src="img/logo02.png" alt="">
+            <p>革新的な技術で世の中を動かす企業を目します。世の中を動かす。</p>
+          </div>
+          <div class="contents-item" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="800">
+            <img src="img/logo03.png" alt="">
+            <p>株式会社では最動かす企業を目指しますージン企業を目指します。</p>
+          </div>
+          <div class="contents-item" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="1200">
+            <img src="img/logo04.png" alt="">
+            <p>株式会社では最動かす企業を指しますージサン企業を目指します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-wrapper">
+        <h1 class="heading" id="project">PROJECT</h1>
+        <div class="project-contents">
+          <div class="project-item" data-aos="fade-right">
+            <img src="img/photo14.jpg" alt="">
+            <p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な革新的な革新的な技術で世の中を技術で世の中を技術で世の中を動かす企業を目指します。</br></br>
+              ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指し調和を目指し調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+          </div>
+          <div class="project-item" data-aos="fade-left">
+            <img src="img/photo15.jpg" alt="">
+            <p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な革新的な革新的な技術で世の中を技術で世の中を技術で世の中を動かす企業を目指します。</br></br>
+              ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指し調和を目指し調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-wrapper">
+        <h1 class="heading" id="company">COMPANY</h1>
+        <div class="company-contents" data-aos="fade-right">
+          <p class="adress">〒103-1234</br>
+            見本県見本市仮区見本町1-3-5</br>
+            TEL 01234-567-8901</br>
+            e-Mail info@example.com</br>
+            営業時間 10:00〜20:00（水曜定休）</br>
+            ※都合により休業する場合がございます</p>
+          <div class="ggmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12794.37516750043!2d136.931998!3d36.708298!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ade3e8e4c2801b8!2z56aP5bKh6aeF!5e0!3m2!1sja!2sus!4v1623426363276!5m2!1sja!2sus" width="480" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Copyright(c) 2016 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com">http://f-tpl.com</a></p>
+    
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
